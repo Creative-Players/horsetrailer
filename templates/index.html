@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Application</title>
+</head>
+<body>
+    <h1>Welcome to your application</h1>
+    {% if authenticated %}
+    <p>You are authenticated.</p>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <a href="{{ url_for('export_emails') }}">Export Emails</a>
+    {% else %}
+    <p>You are not authenticated. <a href="{{ url_for('login') }}">Login</a></p>
+    {% endif %}
+</body>
+</html>
